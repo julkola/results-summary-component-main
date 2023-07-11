@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Results summary component</title>
 
@@ -14,34 +15,85 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
+<body class="flex flex-col items-center justify-center min-h-full font-grotesk">
+  <div class="md:flex md:shadow-lg md:mx-auto mb-2 md:rounded-3xl text-lg">
+    <div class="text-center flex flex-col items center bg-gradient-to-b from-lightSlateBlue to-lightRoyalBlue rounded-b-3xl md:rounded-t-3xl md:w-1/2 px-6 py-8">
+      <span class="text-lightLavender text-xl">Your Result</span>
+      <div class="my-8 rounded-full bg-gradient-to-b from-violetBlue to-persianBlue mx-auto w-40 h-40 flex flex-col items-center justify-center">
+        <span class="text-white text-6xl">76</span>
+        <span class="text-lightLavender">of 100</span>
+      </div>
+      <span class="text-white text-3xl mb-6">Great</span>
+      <div class="text-lightLavender text-center flex-1 flex items-end">
+        <span>You scored higher than 65% of the people who have taken these tests.</span>
+      </div>
+    </div>
+    <div class="md:w-1/2 px-6 py-8">
+      <h2 class="text-darkGrayBlue font-bold text-lg">
+        Summary
+      </h2>
+      <div class="text-darkGrayBlue text-opacity-50 my-7">
+        <div class="flex justify-between items-center py-2 px-4 bg-opacity-10 rounded-md mb-6 bg-lightRed">
+          <span class="flex items-center text-lightRed">
+            <svg height="28" width="28" view-box="0 0 20 20" class="mr-3">
+              <use href="/assets/images/icons.svg#reaction" xlink:href="/assets/images/icons.svg#reaction"></use>
+            </svg>
+            Reaction
+          </span>
+          <span>
+            <b class="text-darkGrayBlue">80</b>
+            <span>/&nbsp;100</span>
+          </span>
+        </div>
+        <div class="flex justify-between items-center py-2 px-4 bg-opacity-10 rounded-md mb-6 bg-orangeyYellow">
+          <span class="flex items-center text-orangeyYellow">
+            <svg height="28" width="28" view-box="0 0 20 20" class="mr-3">
+              <use href="/assets/images/icons.svg#memory" xlink:href="/assets/images/icons.svg#memory"></use>
+            </svg>
+            Memory
+          </span>
+          <span>
+            <b class="text-darkGrayBlue">92</b>
+            <span>/&nbsp;100</span>
+          </span>
+        </div>
+        <div class="flex justify-between items-center py-2 px-4 bg-opacity-10 rounded-md mb-6 bg-greenTeal">
+          <span class="flex items-center text-greenTeal">
+            <svg height="28" width="28" view-box="0 0 20 20" class="mr-3">
+              <use href="/assets/images/icons.svg#verbal" xlink:href="/assets/images/icons.svg#verbal"></use>
+            </svg>
+            Verbal
+          </span>
+          <span>
+            <b class="text-darkGrayBlue">61</b>
+            <span>/&nbsp;100</span>
+          </span>
+        </div>
+        <div class="flex justify-between items-center py-2 px-4 bg-opacity-10 rounded-md bg-cobaltBlue">
+          <span class="flex items-center text-cobaltBlue">
+            <svg height="28" width="28" view-box="0 0 20 20" class="mr-3">
+              <use href="/assets/images/icons.svg#visual" xlink:href="/assets/images/icons.svg#visual"></use>
+            </svg>
+            Visual
+          </span>
+          <span>
+            <b class="text-darkGrayBlue">72</b>
+            <span>/&nbsp;100</span>
+          </span>
+        </div>
+      </div>
+      <button class="relative w-full mt-2 py-2 text-white rounded-full overflow-hidden bg-gradient-to-b from-lightSlateBlue to-lightRoyalBlue after:content-[''] after:absolute after:inset-0 after:bg-darkGrayBlue hover:after:opacity-0 after:opacity-100 after:duration-500 after:shadow-ring after:rounded-full hover:after:translate-y-3/4 hover:after:scale-75 after:shadow-darkGrayBlue">
+        <span class="relative z-10">
+          Continue
+        </span>
+      </button>
+    </div>
+  </div>
 
-  Your Result
-  76
-  of 100
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
+  <div class="attribution mb-8">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Julia K</a>.
   </div>
 </body>
 </html>
